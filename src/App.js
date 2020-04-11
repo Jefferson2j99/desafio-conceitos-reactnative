@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import api from './services/api';
 
-import { SafeAreaView, View, FlatList, Text, StatusBar, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  FlatList,
+  Text,
+  StatusBar,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
 export default function App() {
   const [repositories, setRepositories] = useState([]);
@@ -30,6 +37,7 @@ export default function App() {
 
   return (
     <>
+      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
       <SafeAreaView style={styles.container}>
         <FlatList
           data={repositories}
